@@ -1,10 +1,14 @@
 #!/usr/bin/env node
 var prerender = require('./lib');
 
+
 var server = prerender({
-  chromeLocation: './lib/browsers/'
-  chromeFlags: ['--no-sandbox', '--headless', '--disable-gpu', '--remote-debugging-port=9222', '--hide-scrollbars']
+   chromeLocation: './lib/browsers/',
+   chromeFlags: ['--no-sandbox','--headless', '--disable-gpu', '--remote-debugging-port=9222', '--hide-scrollbars','--disable-setuid-
+sandbox' ]
+
 });
+
 
 server.use(prerender.sendPrerenderHeader());
 server.use(prerender.browserForceRestart());
