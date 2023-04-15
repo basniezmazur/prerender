@@ -2,7 +2,7 @@
 var prerender = require('./lib');
 
 var server = prerender({
-    chromeLocation: '/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
+    chromeLocation: './lib/browsers/'
 });
 
 server.use(prerender.sendPrerenderHeader());
