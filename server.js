@@ -2,7 +2,7 @@
 var prerender = require('./lib');
 
 var server = prerender({
-  chromeLocation: './lib/browsers/',
+  chromeLocation: './lib/browsers/'
 });
 
 server.use(prerender.sendPrerenderHeader());
